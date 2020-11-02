@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { DevNotesProvider } from 'react-devnotes'
 
-import { ExampleComponent } from '@sampaioleal/react-devnotes'
-import '@sampaioleal/react-devnotes/dist/index.css'
+import PageOne from './pages/PageOne'
+import PageTwo from './pages/PageTwo'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  const [page, setPage] = useState(1)
+  return (
+    <DevNotesProvider>
+      {page === 1 ? (
+        <PageOne changePage={setPage} />
+      ) : (
+        <PageTwo changePage={setPage} />
+      )}
+    </DevNotesProvider>
+  )
 }
 
 export default App

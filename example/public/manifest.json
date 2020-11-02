@@ -1,6 +1,6 @@
 {
-  "short_name": "@sampaioleal/react-devnotes",
-  "name": "@sampaioleal/react-devnotes",
+  "short_name": "react-devnotes",
+  "name": "react-devnotes",
   "icons": [
     {
       "src": "favicon.ico",
