@@ -44,12 +44,16 @@ const DevNotesProvider: React.FC<DevNotesProviderProps> = ({ children }) => {
         addDevNotes: devNotes.addDevNotes
       }}
     >
-      <Bubble onClick={toggleNotesPanel} state={notesPanel} />
-      <NotesContainer ref={notesPanelRef} state={notesPanel}>
-        {devNotes.notes.map((note) => {
-          return <Note key={note}>{note}</Note>
-        })}
-      </NotesContainer>
+      {process.env.NODE_ENV === 'development' ? (
+        <>
+          <Bubble onClick={toggleNotesPanel} state={notesPanel} />
+          <NotesContainer ref={notesPanelRef} state={notesPanel}>
+            {devNotes.notes.map((note) => {
+              return <Note key={note}>{note}</Note>
+            })}
+          </NotesContainer>
+        </>
+      ) : null}
       {children}
     </DevNotesContext.Provider>
   )
