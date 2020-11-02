@@ -1,7 +1,7 @@
-import { ExampleComponent } from '.'
+import { DevNote } from '.'
 
 describe('ExampleComponent', () => {
   it('is truthy', () => {
-    expect(ExampleComponent).toBeTruthy()
+    expect(DevNote).toBeTruthy()
   })
 })

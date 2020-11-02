@@ -1,7 +1,7 @@
 import React from 'react'
-import { Bubble } from './Bubble'
-import DevNotesState from './DevNotes'
-import NotesContainer, { Note } from './Notes'
+import { Bubble } from '../Bubble'
+import DevNotesState from '../DevNotes'
+import NotesContainer, { Note } from '../Notes'
 interface ContextValue {
   addDevNotes(notes: string[]): void
   removeDevNotes: (notes: string[]) => void

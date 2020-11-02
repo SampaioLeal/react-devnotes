@@ -1,5 +1,5 @@
 import React, { Dispatch, SetStateAction } from 'react'
-import DevNote from 'react-devnotes'
+import { DevNote } from 'react-devnotes'
 
 interface Props {
   changePage: Dispatch<SetStateAction<number>>
